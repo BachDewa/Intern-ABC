@@ -42,10 +42,8 @@ export default function Page() {
   };
 
   const handleCheckboxChange = (taskId: number) => {
-    // Xác định công việc đã hoàn thành và hiển thị thông báo
     setCompletedTaskId(taskId);
 
-    // Xóa công việc sau 2 giây
     setTimeout(() => {
       setCompletedTaskId(null);
       setTasks(tasks.filter(task => task.id !== taskId));
